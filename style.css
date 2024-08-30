@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #f5bc42, #42f542);
+  }
+  .copycode {
+    width: 250px;
+    /* border: 1px solid black; */
+    padding: 2px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+  }
+  h2 {
+    font-size: small;
+    font-weight: 300;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    color: whitesmoke;
+  }
+
+  button {
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    height: 2rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #mybtn2 {
+    margin-left: 2rem;
+    background-color: #42f542;
+  }
+  .buttons {
+    margin-bottom: 2rem;
+  }
+  #mybtn1 {
+    background-color: #f5bc42;
+  }
+  /* From Uiverse.io by Yaya12085 */
+  .code-editor {
+    max-width: 300px;
+    background-color: #1d1e22;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 2px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  .title {
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 1.57px;
+    color: rgb(212 212 212);
+  }
+
+  .icon {
+    width: 20px;
+    transition: 0.2s ease;
+  }
+
+  .icon:hover {
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #6e7281;
+  }
+
+  .editor-content {
+    margin: 0 10px 10px;
+    color: white;
+  }
+
+  .property {
+    margin-left: 30px;
+  }
+
+  .property:hover {
+    cursor: text;
+  }
+
+  .editor-content .color-0 {
+    color: rgb(86 156 214);
+  }
+
+  .editor-content .color-1 {
+    color: rgb(182 206 168);
+  }
+
+  .editor-content .color-2 {
+    color: rgb(156 220 254);
+  }
+
+  .editor-content .color-3 {
+    color: rgb(207 146 120);
+  }
+
+  .color-preview-1,
+  .color-preview-2 {
+    height: 8px;
+    width: 8px;
+    border: 1px solid #fff;
+    display: inline-block;
+    margin-right: 3px;
+  }
+
+  .color-preview-1 {
+    background-color: #1d1e22;
+  }
+
+  .color-preview-1 {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  /* From Uiverse.io by axy1976 */ 
+/* tooltip settings 👇 */
+
+.btn-copy {
+/* button */
+--button-bg: #353434;
+--button-hover-bg: #464646;
+--button-text-color: #cccccc;
+--button-hover-text-color: #8bb9fe;
+--button-border-radius: 10px;
+--button-diameter: 36px;
+--button-outline-width: 1px;
+--button-outline-color: rgb(141, 141, 141);
+/* tooltip */
+--tooltip-bg: #f4f3f3;
+--toolptip-border-radius: 4px;
+--tooltip-font-family: Menlo, Roboto Mono, monospace;
+/* 👆 this field should not be empty */
+--tooltip-font-size: 12px;
+/* 👆 this field should not be empty */
+--tootip-text-color: rgb(50, 50, 50);
+--tooltip-padding-x: 7px;
+--tooltip-padding-y: 7px;
+--tooltip-offset: 8px;
+/* --tooltip-transition-duration: 0.3s; */
+/* 👆 if you need a transition, 
+just remove the comment,
+but I didn't like the transition :| */
+}
+
+.btn-copy {
+box-sizing: border-box;
+width: var(--button-diameter);
+height: var(--button-diameter);
+border-radius: var(--button-border-radius);
+background-color: var(--button-bg);
+color: var(--button-text-color);
+border: none;
+cursor: pointer;
+position: relative;
+outline: none;
+}
+
+.btn-copy > .cp-tooltip {
+position: absolute;
+opacity: 0;
+visibility: 0;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+white-space: nowrap;
+font: var(--tooltip-font-size) var(--tooltip-font-family);
+color: var(--tootip-text-color);
+background: var(--tooltip-bg);
+padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+border-radius: var(--toolptip-border-radius);
+pointer-events: none;
+transition: all var(--tooltip-transition-duration)
+cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn-copy > .cp-tooltip::before {
+content: attr(data-text-initial);
+}
+
+.btn-copy > .cp-tooltip::after {
+content: "";
+position: absolute;
+bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+width: var(--tooltip-padding-y);
+height: var(--tooltip-padding-y);
+background: inherit;
+left: 50%;
+transform: translateX(-50%) rotate(45deg);
+z-index: -999;
+pointer-events: none;
+}
+
+.btn-copy svg {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.cp-check-mark {
+display: none;
+}
+
+/* actions */
+
+.btn-copy:hover .cp-tooltip,
+.btn-copy:focus:not(:focus-visible) .cp-tooltip {
+opacity: 1;
+visibility: visible;
+top: calc((100% + var(--tooltip-offset)) * -1);
+}
+
+.btn-copy:focus:not(:focus-visible) .cp-tooltip::before {
+content: attr(data-text-end);
+}
+
+.btn-copy:focus:not(:focus-visible) .cp-clipboard {
+display: none;
+}
+
+.btn-copy:focus:not(:focus-visible) .cp-check-mark {
+display: block;
+}
+
+.btn-copy:hover,
+.btn-copy:focus {
+background-color: var(--button-hover-bg);
+}
+
+.btn-copy:active {
+outline: var(--button-outline-width) solid var(--button-outline-color);
+}
+
+.btn-copy:hover svg {
+color: var(--button-hover-text-color);
+}
